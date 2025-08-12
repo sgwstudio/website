@@ -12,9 +12,19 @@ interface ImageCarouselProps {
 export default function ImageCarousel({ images, alt, className = "" }: ImageCarouselProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [shuffledImages, setShuffledImages] = useState<string[]>([]);
+  const [isClient, setIsClient] = useState(false);
+
+  // Use original images order on server, shuffled on client
+  const displayImages = isClient ? shuffledImages : images;
 
   useEffect(() => {
-    // Shuffle the images array when component mounts or images change
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return;
+    
+    // Shuffle the images array only on the client side
     const shuffleArray = (array: string[]) => {
       const shuffled = [...array];
       for (let i = shuffled.length - 1; i > 0; i--) {
@@ -25,19 +35,19 @@ export default function ImageCarousel({ images, alt, className = "" }: ImageCaro
     };
 
     setShuffledImages(shuffleArray(images));
-  }, [images]);
+  }, [images, isClient]);
 
   useEffect(() => {
-    if (shuffledImages.length <= 1) return;
+    if (displayImages.length <= 1) return;
 
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => 
-        prevIndex === shuffledImages.length - 1 ? 0 : prevIndex + 1
+        prevIndex === displayImages.length - 1 ? 0 : prevIndex + 1
       );
     }, 4000); // Change image every 4 seconds
 
     return () => clearInterval(interval);
-  }, [shuffledImages.length]);
+  }, [displayImages.length]);
 
   if (!images || images.length === 0) return null;
 
@@ -46,7 +56,7 @@ export default function ImageCarousel({ images, alt, className = "" }: ImageCaro
       className={`relative w-full aspect-[4/3] overflow-hidden ${className}`}
       style={{ borderRadius: '12px' }}
     >
-      {shuffledImages.map((image: string, index: number) => (
+      {displayImages.map((image: string, index: number) => (
         <div
           key={index}
           className={`absolute inset-0 transition-opacity duration-300 ease-linear ${
