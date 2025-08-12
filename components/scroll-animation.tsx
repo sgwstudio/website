@@ -18,7 +18,7 @@ export default function ScrollAnimation({
   direction = 'up',
   distance = 20 
 }: ScrollAnimationProps) {
-  const { elementRef, isIntersecting } = useIntersectionObserver({
+  const { elementRef, isIntersecting } = useIntersectionObserver<HTMLDivElement>({
     threshold: 0.1,
     rootMargin: '0px 0px -30px 0px',
     triggerOnce: true
