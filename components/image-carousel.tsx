@@ -11,18 +11,33 @@ interface ImageCarouselProps {
 
 export default function ImageCarousel({ images, alt, className = "" }: ImageCarouselProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [shuffledImages, setShuffledImages] = useState<string[]>([]);
 
   useEffect(() => {
-    if (images.length <= 1) return;
+    // Shuffle the images array when component mounts or images change
+    const shuffleArray = (array: string[]) => {
+      const shuffled = [...array];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    };
+
+    setShuffledImages(shuffleArray(images));
+  }, [images]);
+
+  useEffect(() => {
+    if (shuffledImages.length <= 1) return;
 
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => 
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        prevIndex === shuffledImages.length - 1 ? 0 : prevIndex + 1
       );
     }, 4000); // Change image every 4 seconds
 
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [shuffledImages.length]);
 
   if (!images || images.length === 0) return null;
 
@@ -31,7 +46,7 @@ export default function ImageCarousel({ images, alt, className = "" }: ImageCaro
       className={`relative w-full aspect-[4/3] overflow-hidden ${className}`}
       style={{ borderRadius: '12px' }}
     >
-      {images.map((image: string, index: number) => (
+      {shuffledImages.map((image: string, index: number) => (
         <div
           key={index}
           className={`absolute inset-0 transition-opacity duration-300 ease-linear ${

@@ -3,7 +3,7 @@ export const contentData = [
     title: "Work Experience",
     items: [
       {
-        title: "Senior Brand Director at GOAT Group",
+        title: "Sr. Brand Director at GOAT Group",
         subTitle: "Los Angeles",
         date: "2022 - Present",
         description: "Senior Director at GOAT Group, overseeing Alias, Sneakers.com, and the corporate brand. GOAT Group operates five brands and serves 60M+ members across 170+ countries.",
@@ -14,8 +14,7 @@ export const contentData = [
                  "/images/AGS-3.png",
                  "/images/AGS-4.png",
                  "/images/AGS-5.png",
-                 "/images/AGS-6.png",
-                 "/images/AGS-7.png"
+                 "/images/AGS-6.png"
                ]
       },
                                 {
@@ -35,11 +34,7 @@ export const contentData = [
                  "/images/goat-8.png",
                  "/images/goat-9.png",
                  "/images/goat-10.png",
-                 "/images/goat-11.png",
-                 "/images/goat-12.png",
-                 "/images/goat-13.png",
-                 "/images/goat-14.png",
-                 "/images/goat-15.png"
+                 "/images/goat-11.png"
                ]
       },
                    {
@@ -56,8 +51,7 @@ export const contentData = [
                  "/images/SGWS-5.png",
                  "/images/SGWS-6.png",
                  "/images/SGWS-7.png",
-                 "/images/SGWS-8.png",
-                 "/images/SGWS-9.png"
+                 "/images/SGWS-8.png"
                ]
       },
       
