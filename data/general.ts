@@ -1,30 +1,30 @@
 export const generalData = {
-  name: "John Doe",
-  avatar: "https://github.com/ibelick.png",
-  jobTitle: "Senior Front-End Developer",
-  website: "https://www.julienthibeaut.xyz",
+  name: "Samuel Guillopé-Weissler",
+  avatar: "/profile-image.jpg?v=1",
+  jobTitle: "Senior Brand Director at GOAT Group",
+  website: "https://sgwstudio.com",
   about:
-    "Hey there! I'm John, a senior front-end developer with 10 years of experience in web development.",
+    "Samuel is a French-American Brand Director with 15+ years of experience in branding, product, and print design for creative and technology sectors.",
   contacts: [
     {
       label: "Email",
-      value: "john.doe@gmail.com",
-      href: "mailto:john.doe@gmail.com",
+      value: "sgweissler@gmail.com",
+      href: "mailto:sgweissler@gmail.com",
     },
     {
-      label: "Twitter",
-      value: "ibelick",
-      href: "https://twitter.com/ibelick",
+      label: "LinkedIn",
+      value: "Samuel Guillopé-Weissler",
+      href: "https://www.linkedin.com/in/sgwstudio/",
     },
     {
-      label: "Github",
-      value: "ibelick",
-      href: "https://github.com/ibelick",
+      label: "Instagram",
+      value: "@sgwstudio",
+      href: "https://instagram.com/sgwstudio",
     },
     {
-      label: "Read.CV",
-      value: "ibelick",
-      href: "https://read.cv/ibelick",
+      label: "Portfolio",
+      value: "sgwstudio.com",
+      href: "https://sgwstudio.com",
     },
   ],
 };
