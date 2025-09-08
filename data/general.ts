@@ -1,7 +1,7 @@
 export const generalData = {
   name: "Samuel Guillopé-Weissler",
-  avatar: "/profile-image.jpg?v=1",
-  jobTitle: "Sr. Brand Director at GOAT Group",
+  avatar: "/profile-image.png?v=2",
+  jobTitle: "Brand and Design Director",
   website: "https://sgwstudio.com",
   about:
     "Samuel is a French-American Brand Director with 15+ years of experience in branding, product, and print design for creative and technology sectors.",
