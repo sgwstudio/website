@@ -5,29 +5,29 @@ import { generalData } from "@/data/general";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://cv-5g7h-ma4buuirs-sgwstudios-projects.vercel.app'),
-  title: `${generalData.name} - ${generalData.jobTitle}`,
-  description: generalData.about,
+  metadataBase: new URL('https://sgwstudio.com'),
+  title: `SGW Studio - Creative Design & Brand Identity`,
+  description: "A creative studio specialized in brand identity, design direction, and digital experiences.",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://cv-5g7h-ma4buuirs-sgwstudios-projects.vercel.app",
-    siteName: `${generalData.name} - ${generalData.jobTitle}`,
-    title: `${generalData.name} - ${generalData.jobTitle}`,
-    description: generalData.about,
+    url: "https://sgwstudio.com",
+    siteName: "SGW Studio",
+    title: "SGW Studio - Creative Design & Brand Identity",
+    description: "A creative studio specialized in brand identity, design direction, and digital experiences.",
     images: [
       {
         url: "/profile-image.png",
         width: 1200,
         height: 630,
-        alt: `${generalData.name} - ${generalData.jobTitle}`,
+        alt: "SGW Studio - Creative Design & Brand Identity",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${generalData.name} - ${generalData.jobTitle}`,
-    description: generalData.about,
+    title: "SGW Studio - Creative Design & Brand Identity",
+    description: "A creative studio specialized in brand identity, design direction, and digital experiences.",
     images: ["/profile-image.png"],
   },
 };

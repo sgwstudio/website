@@ -1,7 +1,23 @@
 @font-face {
   font-family: 'Monument Grotesque';
-  src: url('/fonts/MonumentGrotesk-Regular.woff2') format('woff2');
+  src: url('/fonts/MonumentGrotesk-Regular.woff2?v=2') format('woff2');
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Monument Grotesque';
+  src: url('/fonts/ABCMonumentGrotesk-Medium.woff2?v=2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Monument Grotesque';
+  src: url('/fonts/ABCMonumentGrotesk-Bold.woff2?v=2') format('woff2');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -12,5 +28,50 @@
 
 /* Apply Monument Grotesque globally */
 * {
-  font-family: 'Monument Grotesque', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  font-family: 'Monument Grotesque', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+/* Ensure all text elements use bold */
+body, html, div, span, p, h1, h2, h3, h4, h5, h6, a, button, input, textarea, select {
+  font-weight: 700 !important;
+}
+
+/* 8-grid system */
+.grid-8 {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0;
+}
+
+.grid-8 > * {
+  position: relative;
+}
+
+.col-span-1 { grid-column: span 1; }
+.col-span-2 { grid-column: span 2; }
+.col-span-3 { grid-column: span 3; }
+.col-span-4 { grid-column: span 4; }
+.col-span-5 { grid-column: span 5; }
+.col-span-6 { grid-column: span 6; }
+.col-span-7 { grid-column: span 7; }
+.col-span-8 { grid-column: span 8; }
+
+/* Responsive grid adjustments */
+@media (max-width: 1024px) {
+  .grid-8 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-8 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-8 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
