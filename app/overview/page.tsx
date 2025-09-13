@@ -13,9 +13,9 @@ export default function Overview() {
       <Navigation />
       
       <main className="pt-16">
-        <div className="w-full px-5 py-20">
+        <div className="w-full px-5">
           {/* Images Grid - Split into rows */}
-          <div className="space-y-0">
+          <div className="space-y-5">
             {/* Row 1: Items 1-8 */}
             <div className="grid-8">
               {allImages.slice(0, 8).map((image, index) => {
@@ -26,7 +26,7 @@ export default function Overview() {
                 return (
                 <div 
                   key={image.id} 
-                  className="col-span-1 relative group p-4"
+                  className="col-span-1 relative group"
                   onMouseEnter={() => !image.isEmpty && setHoveredProject(image.projectId)}
                   onMouseLeave={() => setHoveredProject(null)}
                 >
@@ -74,7 +74,7 @@ export default function Overview() {
                 return (
                 <div 
                   key={image.id} 
-                  className="col-span-1 relative group p-4"
+                  className="col-span-1 relative group"
                   onMouseEnter={() => !image.isEmpty && setHoveredProject(image.projectId)}
                   onMouseLeave={() => setHoveredProject(null)}
                 >
@@ -122,7 +122,7 @@ export default function Overview() {
                 return (
                 <div 
                   key={image.id} 
-                  className="col-span-1 relative group p-4"
+                  className="col-span-1 relative group"
                   onMouseEnter={() => !image.isEmpty && setHoveredProject(image.projectId)}
                   onMouseLeave={() => setHoveredProject(null)}
                 >
@@ -170,7 +170,7 @@ export default function Overview() {
                 return (
                 <div 
                   key={image.id} 
-                  className="col-span-1 relative group p-4"
+                  className="col-span-1 relative group"
                   onMouseEnter={() => !image.isEmpty && setHoveredProject(image.projectId)}
                   onMouseLeave={() => setHoveredProject(null)}
                 >

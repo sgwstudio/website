@@ -8,9 +8,30 @@ export interface PortfolioProject {
   href: string;
   tags: string[];
   images?: string[];
+  metrics?: string[];
 }
 
 export const portfolioProjects: PortfolioProject[] = [
+  {
+    id: 'alias-brand',
+    title: 'Alias Brand',
+    category: 'Brand Identity & Design Direction',
+    year: '2022 - Present',
+    description: 'Alias is the operational, financial, and selling platform behind GOAT Group\'s buy-side businesses, powering both GOAT and Flight Club. I was tasked with crafting a visual and editorial voice that resonates across a wide audience; from Gen Z sellers to fashion industry executives, while maintaining brand authority and cultural relevance.',
+    image: '/projects/alias Brand/1-alias-phone.gif',
+    href: '/projects/alias-brand',
+    tags: ['Content Strategy', 'Brand Design', 'Campaign Design'],
+    images: [
+      '/projects/alias Brand/1-alias-phone.gif',
+      '/projects/alias Brand/2-alias-brand.gif',
+      '/projects/alias Brand/3-alias-appicon.gif',
+      '/projects/alias Brand/4-alias-socials-1.gif'
+    ],
+    metrics: [
+      'Team of 8 creatives managed across content, design, and production, 5 global markets activated with localizations (US, China, Japan, Germany and France)',
+      '+XX% YoY seller engagement following new onboarding and content strategy'
+    ]
+  },
   {
     id: 'goat-group',
     title: 'GOAT Group',

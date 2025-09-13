@@ -14,7 +14,7 @@ export default function Navigation() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-neutral-900 border-b border-gray-200 dark:border-neutral-700">
-      <div className="w-full px-5">
+      <div className="w-full px-5 py-4">
         <div className="grid-8 items-center h-16">
           {/* Logo - Left side */}
           <div className="col-span-2 flex items-center">

@@ -1,5 +1,5 @@
 export const generalData = {
-  name: "Samuel Guillopé-Weissler",
+  name: "SGW STUDIO",
   avatar: "/profile-image.png?v=2",
   jobTitle: "Brand and Design Director",
   website: "https://sgwstudio.com",
