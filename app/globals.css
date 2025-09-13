@@ -49,6 +49,11 @@ body, html, div, span, p, h1, h2, h3, h4, h5, h6, a, button, input, textarea, se
   position: relative;
 }
 
+/* Allow sticky positioning in grid */
+.grid-8 .sticky {
+  position: sticky !important;
+}
+
 .col-span-1 { grid-column: span 1; }
 .col-span-2 { grid-column: span 2; }
 .col-span-3 { grid-column: span 3; }

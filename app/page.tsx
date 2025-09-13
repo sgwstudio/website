@@ -54,44 +54,47 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-900">
-      <main className="pt-5">
-        <div className="w-full px-2.5">
-          {/* Header Section */}
-          <div className="mb-5">
-            <div className="grid-8 items-start">
-              {/* Column 1: SGW Studio */}
-              <div className="col-span-1">
-                <h1 className="text-sm font-normal text-gray-900 dark:text-gray-100">
-                  SGW STUDIO
-                </h1>
-              </div>
-              
-              {/* Column 2: Menu */}
-              <div className="col-span-1">
-                <nav className="flex flex-col space-y-1">
-                  <Link href="/" className="text-sm font-normal text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-                    INDEX
-                  </Link>
-                  <Link href="/overview" className="text-sm font-normal text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-                    OVERVIEW
-                  </Link>
-                  <Link href="/about" className="text-sm font-normal text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-                    ARCHIVE
-                  </Link>
-                </nav>
-              </div>
-              
-              {/* Columns 3-6: Empty */}
-              <div className="col-span-4"></div>
-              
-              {/* Last two columns: Bio Text */}
-              <div className="col-span-2">
-                <p className="text-sm font-medium text-gray-900 dark:text-gray-100 leading-tight">
-                  SGW Studio is the creative practice of Samuel Guillopé-Weissler, specializing in design and content for the creative and technology sectors. The studio works across branding, product, and digital design, with a focus on research and innovation.
-                </p>
-              </div>
+      {/* Sticky Header */}
+      <div className="sticky top-0 z-40 pointer-events-none">
+        <div className="w-full px-2.5 py-5">
+          <div className="grid-8 items-start">
+            {/* Column 1: SGW Studio */}
+            <div className="col-span-1">
+              <h1 className="text-sm font-normal text-black mix-blend-exclusion opacity-70 pointer-events-auto">
+                SGW STUDIO
+              </h1>
+            </div>
+            
+            {/* Column 2: Menu */}
+            <div className="col-span-1">
+              <nav className="flex flex-col space-y-1">
+                <Link href="/" className="text-sm font-normal text-black hover:text-gray-600 transition-colors mix-blend-exclusion opacity-70 pointer-events-auto">
+                  INDEX
+                </Link>
+                <Link href="/overview" className="text-sm font-normal text-black hover:text-gray-600 transition-colors mix-blend-exclusion opacity-70 pointer-events-auto">
+                  OVERVIEW
+                </Link>
+                <Link href="/about" className="text-sm font-normal text-black hover:text-gray-600 transition-colors mix-blend-exclusion opacity-70 pointer-events-auto">
+                  ARCHIVE
+                </Link>
+              </nav>
+            </div>
+            
+            {/* Columns 3-6: Empty */}
+            <div className="col-span-4"></div>
+            
+            {/* Last two columns: Bio Text */}
+            <div className="col-span-2">
+              <p className="text-sm font-medium text-black leading-tight mix-blend-exclusion opacity-70 pointer-events-auto">
+                SGW Studio is the creative practice of Samuel Guillopé-Weissler, specializing in design and content for the creative and technology sectors. The studio works across branding, product, and digital design, with a focus on research and innovation.
+              </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <main className="pt-0">
+        <div className="w-full px-2.5">
           {/* Images Grid - Split into rows */}
           <div className="space-y-5">
             {/* Row 1: Items 1-8 */}
